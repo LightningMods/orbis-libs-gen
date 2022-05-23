@@ -65,11 +65,3 @@ jobs:
       run: |
         export DISPATCH_ACTION="$(echo run_release_libs_gen)"
         echo "NEW_DISPATCH_ACTION=$DISPATCH_ACTION" >> $GITHUB_ENV
-
-    - name: Repository Dispatch
-      uses: peter-evans/repository-dispatch@v1
-      with:
-        repository: ${{ github.repository_owner }}/orbis-sysroot
-        token: ${{ secrets.DISPATCH_TOKEN }}
-        event-type: ${{ env.NEW_DISPATCH_ACTION }}
-        client-payload: '{"ref": "${{ github.ref }}"}'
