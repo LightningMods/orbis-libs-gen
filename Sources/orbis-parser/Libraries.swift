@@ -43,6 +43,8 @@ struct Libraries {
         "libSceRazorCpu",
         "libSceSsl",
         "libSceSysCore",
+        "libSceShellUIUtil",
+        "libSceSaveData",
         "libSceSysUtil",
         "libSceSysmodule",
         "libSceSystemService",
